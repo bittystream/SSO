@@ -13,5 +13,6 @@
 %>
 	<h1>Welcome, <%= user.getUsername() %>! You've entered system A.</h1>
 	<a href="LogoutController">登出</a>
+	<a href="systemb.jsp">跳转到系统B</a>
 </body>
 </html>
