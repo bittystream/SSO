@@ -15,6 +15,7 @@ public class User {
 	public String getUsername() {
 		return username;
 	}
+
 	public static boolean checkUser(String u, String p) throws IOException {
 		File txt = new File("E:/javaee/sso/src/main/java/cn/edu/cqu/model/user.txt");
 		if (!txt.exists()) txt.createNewFile();
@@ -25,7 +26,7 @@ public class User {
 			// 奇数行，为用户名
 			read_u = line;
 			read_p = br.readLine();
-			System.out.println(read_u + " " + read_p);
+//			System.out.println(read_u + " " + read_p);
 			if (read_u.equals(u) && read_p.equals(p)) {
 				br.close();
 				return true;

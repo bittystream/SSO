@@ -65,12 +65,8 @@ public class LoginController extends HttpServlet {
 						response.sendRedirect("systema.jsp");
 					}
 				}
-			}
-			
+			}	
 		}
-		
-		
-		
 	}
 
 }

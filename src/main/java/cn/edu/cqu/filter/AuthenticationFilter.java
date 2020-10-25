@@ -50,6 +50,8 @@ public class AuthenticationFilter implements Filter {
 		// session中存有用户信息，放行
 		if (req.getSession().getAttribute("CAS_TGC")!=null) {
 			System.out.println("Session OK. AuthenticationFilter let go.");
+			Cookie cookie = new Cookie("redirect_url",service);
+			resp.addCookie(cookie);
 			chain.doFilter(request, response);
 			return;
 		}
